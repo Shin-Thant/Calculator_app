@@ -1,0 +1,373 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+    --mb: 1.5rem;
+
+    /* theme 1 */
+    /* bgs */
+    --tone-main-bg: hsl(222, 26%, 31%);
+    --tone-bg: hsl(223, 31%, 20%);
+    --tone-screen: hsl(224, 36%, 15%);
+
+    /* keys */
+    --tone-key-bg: hsl(225, 21%, 49%);
+    --tone-key-shadow: hsl(224, 28%, 35%);
+
+    --tone-key-equal-bg: hsl(6, 63%, 50%);
+    --tone-key-equal-shadow: hsl(6, 70%, 34%);
+
+    --tone-key-normal-bg: hsl(30, 25%, 89%);
+    --tone-key-normal-shadow: hsl(28, 16%, 65%);
+
+    --tone-text-white: white;
+    --tone-text-grayish-blue: hsl(221, 14%, 31%);
+
+    /* theme 2 */
+    /* bgs */
+    --ttwo-main-bg: hsl(0, 0%, 90%);
+    --ttwo-bg: hsl(0, 5%, 81%);
+    --ttwo-screen: hsl(0, 0%, 93%);
+
+    /* keys */
+    --ttwo-key-bg: hsl(185, 42%, 37%);
+    --ttwo-key-shadow: hsl(185, 58%, 25%);
+
+    --ttwo-key-equal-bg: hsl(25, 98%, 40%);
+    --ttwo-key-equal-shadow: hsl(25, 99%, 27%);
+
+    --ttwo-key-normal-bg: hsl(45, 7%, 89%);
+    --ttwo-key-normal-shadow: hsl(35, 11%, 61%);
+
+    --ttwo-text-white: white;
+    --ttwo-text-grayish-yellow: hsl(60, 10%, 19%);
+
+    /* theme 3 */
+    /* bgs */
+    --tthree-main-bg: hsl(268, 75%, 9%);
+    --tthree-bg: hsl(268, 71%, 12%);
+    --tthree-screen: hsl(268, 71%, 12%);
+
+    /* keys */
+    --tthree-key-bg: hsl(281, 89%, 26%);
+    --tthree-key-shadow: hsl(285, 91%, 52%);
+
+    --tthree-key-equal-bg: hsl(176, 100%, 44%);
+    --tthree-key-equal-shadow: hsl(177, 92%, 70%);
+
+    --tthree-key-normal-bg: hsl(268, 47%, 21%);
+    --tthree-key-normal-shadow: hsl(290, 70%, 36%);
+
+    --tthree-text-white: white;
+    --tthree-text-light-yellow: hsl(52, 100%, 62%);
+    --tthree-text-dark-blue: hsl(198, 20%, 13%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 350ms ease;
+}
+body.theme-one {
+    background-color: var(--tone-main-bg);
+}
+body.theme-two {
+    background-color: var(--ttwo-main-bg);
+}
+body.theme-three {
+    background-color: var(--tthree-main-bg);
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--mb);
+    transition: all 250ms ease;
+}
+
+.theme-one .heading {
+    color: white;
+}
+.theme-two .heading {
+    color: var(--ttwo-text-grayish-yellow);
+}
+.theme-three .heading {
+    color: var(--tthree-text-light-yellow);
+}
+
+.calculator {
+    width: 420px;
+}
+
+.value-box {
+    margin-bottom: var(--mb);
+    min-height: 100px;
+    padding: 1.2rem 2rem;
+    font-size: 2.5rem;
+    text-align: right;
+    font-weight: bold;
+    border-radius: 10px;
+    color: rgb(46, 46, 46);
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    transition: all 350ms ease;
+}
+.theme-one .value-box {
+    color: white;
+    background-color: var(--tone-screen);
+}
+.theme-two .value-box {
+    color: var(--ttwo-text-grayish-yellow);
+    background-color: var(--ttwo-screen);
+}
+.theme-three .value-box {
+    color: var(--tthree-text-light-yellow);
+    background-color: var(--tthree-screen);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 50px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(160, 160, 160);
+    border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.value {
+    width: max-content;
+}
+
+.btn-box {
+    padding: 1.3rem;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+    transition: all 350ms ease;
+}
+.theme-one .btn-box {
+    background-color: var(--tone-bg);
+}
+.theme-two .btn-box {
+    background-color: var(--ttwo-bg);
+}
+.theme-three .btn-box {
+    background-color: var(--tthree-bg);
+}
+
+.btn-box > button {
+    display: inline-block;
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 8px;
+    outline: 0;
+    border: 0;
+    border-bottom: 4px solid transparent;
+    text-transform: uppercase;
+    transition: all 350ms ease;
+}
+
+.theme-one .btn-box > button {
+    color: var(--tone-text-grayish-blue);
+    background-color: var(--tone-key-normal-bg);
+    border-color: var(--tone-key-normal-shadow);
+}
+.theme-two .btn-box > button {
+    color: var(--ttwo-text-grayish-yellow);
+    background-color: var(--ttwo-key-normal-bg);
+    border-color: var(--ttwo-key-normal-shadow);
+}
+.theme-three .btn-box > button {
+    color: var(--tthree-text-light-yellow);
+    background-color: var(--tthree-key-normal-bg);
+    border-color: var(--tthree-key-normal-shadow);
+}
+
+.reset,
+.equal {
+    grid-column: span 2;
+}
+.equal {
+    transition: all 350ms ease;
+}
+.theme-one .equal {
+    color: white !important;
+    background-color: var(--tone-key-equal-bg) !important;
+    border-color: var(--tone-key-equal-shadow) !important;
+}
+.theme-two .equal {
+    color: white !important;
+    background-color: var(--ttwo-key-equal-bg) !important;
+    border-color: var(--ttwo-key-equal-shadow) !important;
+}
+.theme-three .equal {
+    color: var(--tthree-text-dark-blue) !important;
+    background-color: var(--tthree-key-equal-bg) !important;
+    border-color: var(--tthree-key-equal-shadow) !important;
+}
+
+.del,
+.reset,
+.multiply {
+    font-size: 1.1rem !important;
+    transition: all 350ms ease;
+}
+
+.theme-one .del,
+.theme-one .reset {
+    color: white !important;
+    background-color: var(--tone-key-bg) !important;
+    border-color: var(--tone-key-shadow) !important;
+}
+.theme-two .del,
+.theme-two .reset {
+    color: white !important;
+    background-color: var(--ttwo-key-bg) !important;
+    border-color: var(--ttwo-key-shadow) !important;
+}
+.theme-three .del,
+.theme-three .reset {
+    color: white !important;
+    background-color: var(--tthree-key-bg) !important;
+    border-color: var(--tthree-key-shadow) !important;
+}
+
+.calc {
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.text {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.theme-section {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.theme {
+    width: max-content;
+    background-color: #555;
+    border-radius: 50px;
+    padding: 5px 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    transition: all 350ms ease;
+}
+.theme-one .theme {
+    background-color: var(--tone-bg);
+}
+.theme-two .theme {
+    background-color: var(--ttwo-bg);
+}
+.theme-three .theme {
+    background-color: var(--tthree-bg);
+}
+
+input[type="radio"] {
+    display: none;
+}
+.labels {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+label[for="radio1"]::before {
+    content: "1";
+    position: absolute;
+    top: -25px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 150ms ease;
+}
+label[for="radio2"]::before {
+    content: "2";
+    position: absolute;
+    top: -25px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 150ms ease;
+}
+label[for="radio3"]::before {
+    content: "3";
+    position: absolute;
+    top: -25px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 150ms ease;
+}
+.indicator {
+    position: absolute;
+    left: 9px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    transition: transform 250ms ease;
+}
+.theme-one .indicator {
+    background-color: var(--tone-key-equal-bg);
+}
+.theme-two .indicator {
+    background-color: var(--ttwo-key-equal-bg);
+}
+.theme-three .indicator {
+    background-color: var(--tthree-key-equal-bg);
+}
+
+input[id="radio1"]:checked ~ .indicator {
+    transform: translateX(0);
+}
+input[id="radio2"]:checked ~ .indicator {
+    transform: translateX(calc(13px + 0.5rem));
+}
+input[id="radio3"]:checked ~ .indicator {
+    transform: translateX(calc(26px + 1rem));
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        padding: 1rem 0;
+    }
+
+    .calculator {
+        width: 90%;
+    }
+
+    .btn-box > button {
+        padding: 1rem 0;
+    }
+}

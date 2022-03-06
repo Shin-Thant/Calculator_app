@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calculator</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body class="theme-one">
+        <div class="calculator">
+            <section class="heading">
+                <h2 class="calc">calc</h2>
+                <div class="theme-section">
+                    <h3 class="text">THEME</h3>
+                    <div class="theme">
+                        <input id="radio1" type="radio" name="radios" checked />
+                        <label for="radio1" class="labels"></label>
+
+                        <input id="radio2" type="radio" name="radios" />
+                        <label for="radio2" class="labels"></label>
+
+                        <input id="radio3" type="radio" name="radios" />
+                        <label for="radio3" class="labels"></label>
+
+                        <span class="indicator"></span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="value-box">
+                <div class="value">0</div>
+            </section>
+
+            <section class="btn-box">
+                <button value="7">7</button>
+                <button value="8">8</button>
+                <button value="9">9</button>
+                <button class="del" value="delete">del</button>
+                <button value="4">4</button>
+                <button value="5">5</button>
+                <button value="6">6</button>
+                <button class="plus" value="+">+</button>
+                <button value="1">1</button>
+                <button value="2">2</button>
+                <button value="3">3</button>
+                <button class="minus" value="-">-</button>
+                <button value=".">.</button>
+                <button value="0">0</button>
+                <button class="divide" value="/">/</button>
+                <button class="multiply" value="*">x</button>
+                <button class="reset">reset</button>
+                <button class="equal" value="=">=</button>
+            </section>
+        </div>
+
+        <script src="./app.js"></script>
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+        ></script>
+    </body>
+</html>
